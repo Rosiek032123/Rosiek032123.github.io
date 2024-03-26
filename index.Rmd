@@ -4,7 +4,7 @@ author: "Rosemarie Kent"
 output: html_document
 ---
 
-## [HOME](http://Rosiek032123.github.io/) |  [ABOUT ME](http://Rosiek032123.github.io/About_me/) | [CV](http://Rosiek032123.github.io/CV/RosemarieKent-4.pdf)
+## [HOME](http://Rosiek032123.github.io/) |  [ABOUT ME](http://Rosiek032123.github.io/About_me/) | [CV](http://Rosiek032123.github.io/CV/RosemarieKent-4.pdf) |  [PORTFOLIO](http://Rosiek032123.github.io/Portfolio/)
 
 ```{r,out.width="60%", echo=FALSE}
 knitr::include_graphics("./media/_DSC3268.jpg")
