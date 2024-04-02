@@ -1,13 +1,16 @@
 ---
-title: "Diamond Analysis"
 output:
   html_document: default
   pdf_document: default
 ---
 
+## [HOME](http://Rosiek032123.github.io/) \| [ABOUT ME](http://Rosiek032123.github.io/About_me/) \| [CV](http://Rosiek032123.github.io/CV/RosemarieKent-4.pdf) \| [PORTFOLIO](http://Rosiek032123.github.io/Portfolio/)
+
+# Diamond Analysis
+
 ### To see the code behind this analysis please click on this [link](http://Rosiek032123.github.io/Portfolio/Biol_3100_Final_Project/Final-Project.html).
 
-# Introduction
+## Introduction
 
 Diamond Prices can be impacted by various things, such as inflation, carat, etc. I will be examining a data set with 53,943 diamonds which includes the variables, carat, cut, color, clarity, x, y, z, depth, table, and price. The images below give a visual explanation of each variable.
 
@@ -30,7 +33,7 @@ The purpose of this analysis is to answer the following questions:
 
 4.     What are the differences in prediction intervals and confidence intervals, for diamonds of different carat weights, with the best cut, least amount of color, and highest amount to clarity?
 
-# Exploratory Analysis
+## Exploratory Analysis
 
 The scatterplot of the price against carat doesn’t appear to follow a linear pattern. This would require a transformation to make the data follow a linear trend. I will transform my data by examining both price and carat on a log scale. After transforming the data, the scatterplot follows a more linear pattern. Based on the scatter plot here is not an interaction between diamond clarity and carat weight. If there was an interaction, I would be able to assign different slopes for each clarity level.
 
@@ -72,7 +75,7 @@ Eigen Values
 knitr::include_graphics("./images/3i.png")
 ```
 
-# Data Analysis and Modeling
+## Data Analysis and Modeling
 
 The equation for our current model is.
 
@@ -188,7 +191,7 @@ $$
 
 The $R^2$after transforming back to the original data is 0.9644476. Almost 97% of variability in the log of diamond prices can be explained by the five variables in our model. This means our model is great at explaining variation in the log of diamond prices.
 
-# Conclusion
+## Conclusion
 
 Now that the analysis is complete, the research questions have been answered below.
 
