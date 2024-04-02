@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r,fig.show='hide', warning=FALSE, results="hide"}
-diamonds=read.csv("/Users/rosie/Downloads/Diamonds Prices2022.csv",header=TRUE);diamonds
+diamonds=read.csv("./images/Diamonds_Prices2022.csv",header=TRUE);diamonds
 diamonds_new <- diamonds                                     # Duplicate data
 diamonds_new[is.na(diamonds_new) | diamonds_new == "NaN"] <- NA
 attach(diamonds_new)
