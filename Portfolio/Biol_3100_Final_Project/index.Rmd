@@ -3,7 +3,7 @@ title: "Diamond Analysis"
 output: html_document
 ---
 
-### To see the code behind this analysis please click on this [link](http://Rosiek032123.github.io/Portfolio/Biol%203100%20Final%20Project/Final-Project.rmd).
+### To see the code behind this analysis please click on this [link](http://Rosiek032123.github.io/Portfolio/Biol_3100_Final_Project/Final-Project.html).
 
 # Introduction
 
