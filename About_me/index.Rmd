@@ -19,7 +19,6 @@ But life isn't just about data and statistics. Beyond my academic pursuits, you'
 ```{r,out.width="60%", echo=FALSE}
 knitr::include_graphics("./Images/IMG_5151.JPG")
 knitr::include_graphics("./Images/IMG_6865.JPG")
-knitr::include_graphics("./Images/IMG_3360.JPG")
 ```
 
 On track to graduate Summa Cum Laude in August 2024, I'm eagerly anticipating the journey ahead. Join me as I continue to unravel the mysteries of data and contribute to a brighter, more equitable world.
