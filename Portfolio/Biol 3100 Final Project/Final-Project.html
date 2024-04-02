@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Rosemarie Kent" />
 
 
-<title>Diamond Analysis</title>
+<title>Final Project Code</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -348,151 +349,199 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Diamond Analysis</h1>
+<h1 class="title toc-ignore">Final Project Code</h1>
+<h4 class="author">Rosemarie Kent</h4>
 
 </div>
 
 
-<div id="diamond-analysis" class="section level1">
-<h1>Diamond Analysis</h1>
-<p>To see the code behind this analysis please click on this <a href="%5Bhttp://Rosiek032123.github.io/Portfolio/%5D(http://Rosiek032123.github.io/Portfolio/Biol%203100%20Final%20Project)%7B.uri%7D%5BBiol%5D(http://Rosiek032123.github.io/Portfolio/Biol)3100%20Final%20Project/Final-Project-STAT-4000.rmd$">link</a>.</p>
-<p>Diamond Prices can be impacted by various things, such as inflation,
-carat, etc. I will be examining a data set with 53,943 diamonds which
-includes the variables, carat, cut, color, clarity, x, y, z, depth,
-table, and price. The images below give a visual explanation of each
-variable.</p>
-<p>The purpose of this analysis is to answer the following
-questions:</p>
-<p>Are all the variables in this data set important in explaining
-diamond prices? If, not which variables are important?</p>
-<p>Is there an interaction between diamond clarity and carat weight?</p>
-<p>Does the fitted model explain diamond prices well?</p>
-<p>The scatter plot of the price against doesn’t appear to follow a
-linear pattern. This would require a transformation to make the data
-follow a linear trend. I will transform my data by examining both price
-and carat on a log scale. After transforming the data, the scatter plot
-follows a more linear pattern.</p>
-<p>There is not an interaction between diamond clarity and carat weight.
-If there was an interaction, I would be able to assign different slopes
-for each clarity level.</p>
-<p>The equation for our current model is. <span class="math display">\[Y=\beta_0+\beta_1x_1+\beta_2x_2{{+\beta_3x_3+\beta_4x_4+\beta_5x_5+\beta_6x_6+\gamma}_1G}_1+{\gamma_2G}_2+{\gamma_3G}_3+{\gamma_4G}_4+{\gamma_5G}_5+{\gamma_6G}_6+{\delta_1H}_1+{\delta_2H}_2+{\delta_3H}_3+{\delta_4H}_4+{\delta_5H}_5+{\delta_6H}_6+{\delta_7H}_7+{\zeta_1J}_1+{\zeta_2J}_2+{\zeta_3J}_3+{\zeta_4J}_4+\varepsilon\]</span></p>
-<p>Y: Actual log(diamond price)</p>
-<p><span class="math inline">\(\beta_0\)</span>: When all other values
-are at zero the log(price) of a fair cut, J color, I1 clarity diamond is
-<span class="math inline">\(\beta_0\)</span> after adjusting for
-log(carat).</p>
-<p><span class="math inline">\(\beta_1\)</span>: On average, holding all
-other variables constant there is a <span class="math inline">\(\beta_1\)</span> change in log(price) for every 1
-unit increase in log(carat).</p>
-<p><span class="math inline">\(\beta_2\)</span>: On average, holding all
-other variables constant there is a <span class="math inline">\(\beta_2\)</span> change in log(price) for every 1
-unit increase in depth.</p>
-<p><span class="math inline">\(\beta_3\)</span>: On average, holding all
-other variables constant there is a <span class="math inline">\(\beta_3\)</span> change in log(price) for every 1
-unit increase in table.</p>
-<p><span class="math inline">\(\beta_4\)</span>: On average, holding all
-other variables constant there is a <span class="math inline">\(\beta_4\)</span> change in log(price) for every 1
-unit increase in x variable.</p>
-<p><span class="math inline">\(\beta_5\)</span>: On average, holding all
-other variables constant there is a <span class="math inline">\(\beta_5\)</span> change in log(price) for every 1
-unit increase in y variable.</p>
-<p><span class="math inline">\(\beta_6\)</span>: On average, holding all
-other variables constant there is a <span class="math inline">\(\beta_6\)</span> change in log(price) for every 1
-unit increase in z variable.</p>
-<p><span class="math inline">\(\gamma_1\)</span>: Measures the
-differential log(price) for diamonds in the I color group relative to
-countries in the J color group after adjusting for log(carat).</p>
-<p><span class="math inline">\(\gamma_2\)</span>: Same as <span class="math inline">\(\gamma_1\)</span> but for color group H.</p>
-<p><span class="math inline">\(\gamma_3\)</span>: Same as <span class="math inline">\(\gamma_1\)</span> but for color group G.</p>
-<p><span class="math inline">\(\gamma_4\)</span>: Same as <span class="math inline">\(\gamma_1\)</span> but for color group F.</p>
-<p><span class="math inline">\(\gamma_5\)</span>: Same as <span class="math inline">\(\gamma_1\)</span> but for color group E.</p>
-<p><span class="math inline">\(\gamma_6\)</span>: Same as <span class="math inline">\(\gamma_1\)</span> but for color group D.</p>
-<p><span class="math inline">\(\delta_1\)</span>: Measures the
-differential log(price) for diamonds in the SI2 clarity group relative
-to diamonds in the I1 clarity group after adjusting for log(carat).</p>
-<p><span class="math inline">\(\delta_2\)</span>: Same as <span class="math inline">\(\delta_1\)</span>but for clarity group SI1.</p>
-<p><span class="math inline">\(\delta_3\)</span>: Same as <span class="math inline">\(\delta_1\)</span> but for clarity group VS2.</p>
-<p><span class="math inline">\(\delta_4\)</span>: Same as <span class="math inline">\(\delta_1\)</span> but for clarity group VS1.</p>
-<p><span class="math inline">\(\delta_5\)</span>: Same as <span class="math inline">\(\delta_1\)</span> but for clarity group VVS2.</p>
-<p><span class="math inline">\(\delta_6\)</span>: Same as <span class="math inline">\(\delta_1\)</span> but for clarity group VVS1.</p>
-<p><span class="math inline">\(\delta_7\)</span>: Same as <span class="math inline">\(\delta_1\)</span> but for clarity group IF.</p>
-<p><span class="math inline">\(\zeta_1\)</span>: Measures the
-differential log(price) for diamonds in the “good” cut group relative to
-diamonds in the fair cut group after adjusting for log(carat).</p>
-<p><span class="math inline">\(\zeta_2\)</span>: Same as <span class="math inline">\(\zeta_1\)</span> but for cut group “very
-good.”</p>
-<p><span class="math inline">\(\zeta_3\)</span>: Same as <span class="math inline">\(\zeta_1\)</span> but for cut group “premium.”</p>
-<p><span class="math inline">\(\zeta_4\)</span>: Same as <span class="math inline">\(\zeta_1\)</span> but for cut group “fair.”</p>
-<p><span class="math display">\[
-G_{ti} =
-\left\{
-\begin{array}{ll}
-      1 &amp; \text{if } t^{\text{th}} \text{ diamond is in }
-i^{\text{th}} \text{ color group} \\
-      0 &amp; \text{otherwise}
-\end{array}
-\right.
-\]</span></p>
-<p><span class="math display">\[
-H_{ti} =
-\left\{
-\begin{array}{ll}
-      1 &amp; \text{if } t^{\text{th}} \text{ diamond is in }
-i^{\text{th}} \text{ clarity group} \\
-      0 &amp; \text{otherwise}
-\end{array}
-\right.
-\]</span></p>
-<p><span class="math display">\[
-J_{ti} =
-\left\{
-\begin{array}{ll}
-      1 &amp; \text{if } t^{\text{th}} \text{ diamond is in }
-i^{\text{th}} \text{ cut group} \\
-      0 &amp; \text{otherwise}
-\end{array}
-\right.
-\]</span></p>
-<p><span class="math display">\[
-\varepsilon \sim N(0, \sigma^2)
-\]</span></p>
-<p>I used the standard residual plot to locate the outliers in the data.
-I removed any outlier that was greater than 3 or less than -3. After
-remove the outliers I checked the regression assumptions using the
-residual plot, qq-plot, and density plot. Based on the residual plot the
-equal variances assumption appears to be met. The density plot is
-approximately normal, and the qq-plot is approximately with a few points
-that go briefly outside the error bands.</p>
-<p>The regression analysis found that the variables y, z, and table are
-not significant. I removed those form the model. The new fitted model
-for the data after the non-significant variables and outliers are
-removed is:</p>
-<p><span class="math inline">\(\hat{Y} = 6.2998516 + 1.6608091x_1 +
-0.0046321x_2 + 0.1192737x_3 + 0.1410619G_1 + 0.2661374G_2 + 0.3585841G_3
-+ 0.4244583G_4 + 0.4655162G_5 + 0.5171887G_6 + 0.4042847H_1 +
-0.5714248H_2 + 0.7196982H_3 + 0.7905746H_4 + 0.9228387H_5 + 0.9930853H_6
-+ 1.0772293H_7 + 0.0879206J_1 + 0.1232452J_2 + 0.1424553J_3 +
-0.1654542J_4\)</span></p>
-<p>The <span class="math inline">\(R^2\)</span>after transforming back
-to the original data is 0.9644476.</p>
-<p>Almost 97% of variability in the log of diamond prices can be
-explained by the five variables in our model. This means our model is
-great at explaining variation in the log of diamond prices.</p>
-<p>Now that the analysis is complete, the research questions have been
-answered below.</p>
-<p>Are all the variables in this data set important in explaining
-diamond prices? If, no which variables are important? Based on the
-summary of the regression model we see that cut, color, clarity, depth,
-log(carat) and x have a significant impact on predicting diamond
-log(prices). Is there an interaction between diamond clarity and carat
-weight? Based on the initial box plots it can be determined that there
-is not a significant interaction between clarity and log(carat). This
-was surprising as I believe most people would think that clarity would
-interact in a significant way with carat weight. Does the fitted model
-explain variability in diamond prices well? The fitted model has an
-r-squared value of about .97. This means that our model explains about
-97% of variability in the log of diamond prices.</p>
-</div>
+<pre class="r"><code>diamonds=read.csv(&quot;/Users/rosie/Downloads/Diamonds Prices2022.csv&quot;,header=TRUE);diamonds
+diamonds_new &lt;- diamonds                                     # Duplicate data
+diamonds_new[is.na(diamonds_new) | diamonds_new == &quot;NaN&quot;] &lt;- NA
+attach(diamonds_new)
+diamonds_new$cut=factor(diamonds_new$cut, levels=c(&quot;Fair&quot;,&quot;Good&quot;, &quot;Very Good&quot;, &quot;Premium&quot;, &quot;Ideal&quot;))
+diamonds_new$color=factor(diamonds_new$color, level=c(&quot;J&quot;,&quot;I&quot;,&quot;H&quot;,&quot;G&quot;,&quot;F&quot;,&quot;E&quot;,&quot;D&quot;))
+diamonds_new$clarity=factor(diamonds_new$clarity, level=c(&quot;I1&quot;, &quot;SI2&quot;,&quot;SI1&quot;,&quot;VS2&quot;,&quot;VS1&quot;, &quot;VVS2&quot;, &quot;VVS1&quot;, &quot;IF&quot;))
+mlr=lm(log(price)~log(carat)+(depth)+(table)+x+y+z+as.factor(color)+as.factor(clarity)+as.factor(cut),data=diamonds_new)
+# Lets look at the original data
+library(ggplot2)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;ggplot2&#39;</code></pre>
+<pre><code>## The following object is masked _by_ &#39;.GlobalEnv&#39;:
+## 
+##     diamonds</code></pre>
+<pre class="r"><code>## 
+## Attaching package: &#39;ggplot2&#39;
+## The following object is masked _by_ &#39;.GlobalEnv&#39;:
+## 
+##     diamonds
+ggplot(data =diamonds_new, aes(x = carat, y = price, color = clarity) ) +
+     geom_point(alpha = .5, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ggtitle(&quot;Carat Vs. Price- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>ggplot(data =diamonds_new, aes(x = carat, y = price, color = clarity) ) +
+     geom_boxplot(alpha = .25, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ggtitle(&quot;Boxplots: Carat Vs.Price- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#the origianl data appears to be curved, I will attempted to fix it by doing log(x) and log(y)
+
+library(ggplot2)
+ggplot(data = diamonds_new, aes(x =log(carat), y = log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ggtitle(&quot;log(Carat) Vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>ggplot(data = diamonds_new, aes(x = log(carat), y = log(price), color = clarity) ) +
+     geom_boxplot(alpha = .25, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ggtitle(&quot;Boxplots: log(Carat) Vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>diamonds_new &lt;- diamonds                                     # Duplicate data
+diamonds_new[is.na(diamonds_new) | diamonds_new == &quot;NaN&quot;] &lt;- NA
+attach(diamonds_new)</code></pre>
+<pre><code>## The following objects are masked from diamonds_new (pos = 4):
+## 
+##     carat, clarity, color, cut, depth, price, table, x, X, y, z</code></pre>
+<pre class="r"><code>## The following objects are masked from diamonds_new (pos = 4):
+## 
+##     carat, clarity, color, cut, depth, price, table, x, X, y, z
+diamonds_new$cut=factor(diamonds_new$cut, levels=c(&quot;Fair&quot;,&quot;Good&quot;, &quot;Very Good&quot;, &quot;Premium&quot;, &quot;Ideal&quot;))
+diamonds_new$color=factor(diamonds_new$color, level=c(&quot;J&quot;,&quot;I&quot;,&quot;H&quot;,&quot;G&quot;,&quot;F&quot;,&quot;E&quot;,&quot;D&quot;))
+diamonds_new$clarity=factor(diamonds_new$clarity, level=c(&quot;I1&quot;, &quot;SI2&quot;,&quot;SI1&quot;,&quot;VS2&quot;,&quot;VS1&quot;, &quot;VVS2&quot;, &quot;VVS1&quot;, &quot;IF&quot;))
+mlr=lm(log(price)~log(carat)+(depth)+(table)+x+y+z+as.factor(color)+as.factor(clarity)+as.factor(cut),data=diamonds_new)
+#base cut is Fair, base color is J, base clarity is I1
+summary(mlr)
+summary(lm((price)~(carat)+(depth)+(table)+x+y+z+as.factor(color)+as.factor(clarity)+as.factor(cut),data=diamonds_new)
+)
+#based on the model summary y,z, and table, are not significant so I will remove them.
+
+#Plots of the different variables
+
+library(ggplot2)
+summary(lm(log(price)~log(carat)+(depth)+(table)+x+y+z+as.factor(color)+as.factor(clarity)+as.factor(cut),data=diamonds_new))
+
+#depth and price
+ggplot(data =diamonds_new, aes(x = (depth), y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ ggtitle(&quot;Depth vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#carat vs price
+ggplot(data =diamonds_new, aes(x = (carat), y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ ggtitle(&quot;Carat vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#cut vs price
+ggplot(data =diamonds_new, aes(x = (cut), y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ ggtitle(&quot;Cut vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#color vs price
+ggplot(data =diamonds_new, aes(x = (color), y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) +
+     guides(color = guide_legend(override.aes = list(size = 3) ) )+ ggtitle(&quot;Color vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#table vs price 
+ggplot(data =diamonds_new, aes(x =table, y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) + ggtitle(&quot;Y vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#x and price
+ggplot(data =diamonds_new, aes(x =x, y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) + ggtitle(&quot;X vs. log(Price)&quot;)</code></pre>
+<pre class="r"><code>#y vs price
+ggplot(data =diamonds_new, aes(x =y, y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) + ggtitle(&quot;Y vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#z vs price
+ggplot(data =diamonds_new, aes(x =z, y =log(price), color = clarity) ) +
+     geom_point(alpha = .5, size = 1) + ggtitle(&quot;Z vs. log(Price)- colored by clarity level&quot;)</code></pre>
+<pre class="r"><code>#for the outliers do three plots, plot r, plot dfits, plot cooks d, lcarity is still important 
+
+# Regression Model
+summary(mlr)
+#based on the summary output we will remove table y and z as they are not significant 
+
+lm(log(price)~log(carat)+(depth)+x+as.factor(color)+as.factor(clarity)+ as.factor(cut),data=diamonds_new)
+model &lt;-lm(log(price)~log(carat)+(depth)+x+as.factor(color)+as.factor(clarity)+ as.factor(cut),data=diamonds_new)
+summary(model)
+r &lt;- rstandard(model)      # ask for standardized residuals
+fit &lt;- model$fitted.values    # ask for fitted values
+
+
+
+# residuals vs. fitted  note: r vs. x is redundant in SLR
+plot(fit,r, main = &quot;Residuals vs. Fitted&quot;,
+     xlab = &quot;fitted&quot;, ylab = &quot;r&quot;)
+abline(h=0, col = &quot;blue&quot;)</code></pre>
+<pre class="r"><code># QQ plot
+qqnorm(r)
+qqline(r)</code></pre>
+<pre class="r"><code>library(ggpubr)
+ggqqplot(r)+
+  ggtitle(&quot;QQ Plot&quot;)</code></pre>
+<pre class="r"><code># density plot
+plot(density(r), main = &quot;Density Plot of Residuals&quot;)</code></pre>
+<pre class="r"><code># Index plot of residuals and hat values
+model &lt;-lm(log(price)~log(carat)+as.factor(cut)+as.factor(color)+as.factor(clarity)+(depth)+x,data=diamonds_new)
+
+summary(model)
+Influence &lt;- lm.influence(model)  # ask for additional diagnostics
+hat &lt;- Influence$hat 
+r &lt;- rstandard(model)      # ask for standardized residuals
+plot(r, main = &quot;Index Plot of Standardized Residuals&quot;, pch = NA)
+text(r, labels=rownames(diamonds_new), cex = 0.5)
+abline(h=c(-3,3), col=&quot;blue&quot;)</code></pre>
+<pre class="r"><code>r
+Dfits &lt;- dffits(model)      # ask for DFITS
+CooksD &lt;- cooks.distance(model)
+# Index plot for DFits
+plot(Dfits, pch = NA,
+     main = &quot;Index Plot of DFits&quot;)
+text(Dfits, labels=rownames(diamonds_new), cex = 1.0)</code></pre>
+<pre class="r"><code># Index plot for Cooks D
+plot(CooksD, pch = NA,
+     main = &quot;Index Plot of Cook&#39;s Distance&quot;)
+text(CooksD, labels=rownames(diamonds_new), cex = 1.0)</code></pre>
+<pre class="r"><code># Checking for Influential Pts       
+# fit the MLR Model
+lm(log(price)~log(carat)+as.factor(cut)+as.factor(color)+as.factor(clarity)+(depth)+x,data=diamonds_new)
+modsummary &lt;- summary(lm(log(price)~log(carat)+as.factor(cut)+as.factor(color)+as.factor(clarity)+(depth)+x,data=diamonds_new))
+modelMLR &lt;- lm(log(price)~log(carat)+as.factor(cut)+as.factor(color)+as.factor(clarity)+(depth)+x,data=diamonds_new)
+
+
+
+
+
+###NO OUTLIER DATA###
+diamonds_noout=diamonds_new[-c(15, 682, 1642, 3276, 4051, 5326, 5822, 5858, 6140, 6160, 6418, 6736, 8204, 8593, 9601, 9712, 11183, 11407, 11408, 11561, 11964, 12978, 14078, 14239, 14435, 14576, 15952, 16085, 16101, 16405, 16541, 19554, 21887, 21936, 22143, 22525, 22701, 22732, 23410, 24521, 24655, 24884, 25068, 25069, 25315, 25332, 25626, 25925, 25926, 25998, 26004, 26078, 26106, 26199, 26238, 26244, 26312, 26408, 26484, 26492, 26550, 26635, 26661, 26966, 26999, 27050, 27197, 27227, 27350, 27430, 27456, 27458, 27508, 27531, 27636, 27674, 27923, 28711, 29549, 29946, 30948, 31996, 34612, 36652, 36653, 36984, 37449, 38154, 38349, 39502, 40287, 41020, 41021, 41052, 43425, 43426, 43910, 43990, 45866, 46477, 47004, 47950, 49774, 50672, 50673, 50792, 50954, 51174, 51175, 51370, 52378, 52861, 52862, 53599, 660, 2025, 2026, 2412, 5079, 5217, 5245, 5591, 5931, 6349, 6440, 7111, 7150, 7303, 7735, 7744, 7745, 8239, 8790, 9180, 10130, 10188, 10660, 11515, 11605, 11660, 12150, 12563, 12687, 12954, 13224, 13563, 14110, 14928, 15320, 15471, 15906, 15942, 16284, 16297, 16342, 16603, 17197, 17404, 17467, 17898, 17950, 18397, 19059, 19082, 19092, 19180, 19253, 19315, 19340, 19347, 19604, 19867, 19922, 20852, 21139, 21273, 21331, 21725, 21863, 22287, 22400, 22429, 22441, 22494, 22742, 22871, 23219, 23540, 23645, 23775, 23878, 23940, 23961, 24132, 24276, 24298, 24329, 24435, 24448, 24785, 24817, 24946, 25461, 25481, 25526, 25580, 25779, 25819, 25901, 25999, 26000, 26091, 26101, 26130, 26432, 26445, 26497, 26535, 26593, 26658, 26925, 26933, 27006, 27017, 27131, 27355, 27416, 27631, 27650, 27680, 27835, 30165, 30722, 30805, 31809, 32525, 34044, 35874, 38057, 39566, 40806, 41754, 41919, 46345, 48378, 50959, 51293, 52806,49558,49557,3927), ]
+model &lt;-lm(log(price)~log(carat)+as.factor(cut)+as.factor(color)+as.factor(clarity)+(depth)+x,data=diamonds_new)
+
+summary(model)
+Influence &lt;- lm.influence(model)  # ask for additional diagnostics
+hat &lt;- Influence$hat 
+r &lt;- rstandard(model)      # ask for standardized residuals
+plot(r, main = &quot;Index Plot of Standardized Residuals&quot;, pch = NA)
+text(r, labels=rownames(diamonds_new), cex = 0.5)
+abline(h=c(-3,3), col=&quot;blue&quot;)</code></pre>
+<pre class="r"><code>r
+paste(which(r&gt;=3),collapse=&quot;, &quot;)
+paste(which(r&lt;=-3),collapse=&quot;, &quot;)
+model_noout=lm(log(price)~log(carat)+(depth)+x+as.factor(color)+as.factor(clarity)+as.factor(cut),data=diamonds_noout)
+summary(model_noout)
+Influence &lt;- lm.influence(model_noout)  # ask for additional diagnostics
+hat &lt;- Influence$hat 
+r1 &lt;- rstandard(model_noout)      # ask for standardized residuals
+plot(r1, main = &quot;Index Plot of Standardized Residuals&quot;, pch = NA)
+text(r1, labels=rownames(diamonds_noout), cex = 0.5)
+abline(h=c(-3,3), col=&quot;blue&quot;)</code></pre>
+<pre class="r"><code>r1
+# residuals vs. fitted  note: r vs. x is redundant in SLR
+fit=model_noout$fitted.values
+plot(fit,r1, main = &quot;Residuals vs. Fitted&quot;,
+     xlab = &quot;fitted&quot;, ylab = &quot;r&quot;)
+abline(h=0, col = &quot;blue&quot;)</code></pre>
+<pre class="r"><code># QQ plot
+qqnorm(r1)
+qqline(r1)</code></pre>
+<pre class="r"><code>library(ggpubr)
+ggqqplot(r1)+
+  ggtitle(&quot;QQ Plot&quot;)</code></pre>
+<pre class="r"><code># density plot
+plot(density(r1), main = &quot;Density Plot of Residuals&quot;)</code></pre>
+<pre class="r"><code># R squared for transformed model
+SSE &lt;- sum((diamonds_noout$price-exp(model_noout$fitted.values))^2)
+SSY &lt;- sum((diamonds_noout$price-mean(diamonds_noout$price))^2)
+1-SSE/SSY
+
+# residual standard error calculation
+sqrt(SSE/(nrow(diamonds_noout)-6-1))</code></pre>
 
 
 
