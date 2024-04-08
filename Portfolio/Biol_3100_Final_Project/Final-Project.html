@@ -355,7 +355,7 @@ display: none;
 </div>
 
 
-<pre class="r"><code>diamonds=read.csv(&quot;/Users/rosie/Downloads/Diamonds Prices2022.csv&quot;,header=TRUE);diamonds
+<pre class="r"><code>diamonds=read.csv(&quot;./images/Diamonds_Prices2022.csv&quot;,header=TRUE);diamonds
 diamonds_new &lt;- diamonds                                     # Duplicate data
 diamonds_new[is.na(diamonds_new) | diamonds_new == &quot;NaN&quot;] &lt;- NA
 attach(diamonds_new)
