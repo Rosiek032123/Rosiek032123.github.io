@@ -1,7 +1,13 @@
 ---
-title: "Portfolio"
-author: "Rosemarie Kent"
-output: html_document
 ---
+---
+
+## [HOME](http://Rosiek032123.github.io/) \| [ABOUT ME](http://Rosiek032123.github.io/About_me/) \| [CV](http://Rosiek032123.github.io/CV/RosemarieKent-4.pdf) \|
+  <br>
+    <br>
+
+# Portfolio
+  <br>
+    <br>
 
 ## [BIOL3100 Final Project](http://Rosiek032123.github.io/Portfolio/Biol_3100_Final_Project/) \|

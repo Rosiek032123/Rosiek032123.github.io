@@ -229,3 +229,12 @@ knitr::include_graphics("./images/3m.png")
         iv. We are 95% confident that the average price of 1 carat diamonds with an ideal cut, D grade color, and IF clarity will be between \$9080.42 and \$9213.88.
 
     c.  The prediction interval is a lot wider than the confidence interval. Since prediction intervals attempt to create an interval for a specific new observation, there’s more uncertainty in our estimate and thus prediction intervals are always wider than confidence intervals.
+   
+  <br>
+    <br>
+    <br>
+    <br>
+  <br>
+    <br>
+    <br>
+    <br>

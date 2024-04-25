@@ -1,3 +1,7 @@
+---
+---
+---
+
 ------------------------------------------------------------------------
 
 ## [HOME](http://Rosiek032123.github.io/) \| [ABOUT ME](http://Rosiek032123.github.io/About_me/) \| [CV](http://Rosiek032123.github.io/CV/RosemarieKent-4.pdf) \| [PORTFOLIO](http://Rosiek032123.github.io/Portfolio/)
@@ -24,3 +28,5 @@ knitr::include_graphics("./Images/IMG_6865.JPG")
 ```
 
 On track to graduate Summa Cum Laude in August 2024, I'm eagerly anticipating the journey ahead. Join me as I continue to unravel the mysteries of data and contribute to a brighter, more equitable world.
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
